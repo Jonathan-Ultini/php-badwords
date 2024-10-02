@@ -22,10 +22,8 @@
             echo "<div class='alert alert-info'>$paragrafo</div>";
             echo "<p>Lunghezza del paragrafo: <strong>" . strlen($paragrafo) . "</strong> caratteri</p>";
 
-            // Sostituzione della parola da censurare con asterischi della stessa lunghezza
-            $lunghezza_parola = strlen($parola); // Calcolo la lunghezza della parola da censurare
-            $asterischi = str_repeat('*', $lunghezza_parola); // Creo una stringa di asterischi della stessa lunghezza
-            $paragrafo_censurato = str_ireplace($parola, $asterischi, $paragrafo); // Sostituisco la parola con gli asterischi
+            // Sostituzione della parola da censurare con tre asterischi (***)
+            $paragrafo_censurato = str_ireplace($parola, '***', $paragrafo);
 
             // Stampa del paragrafo censurato e della sua lunghezza
             echo "<h2>Paragrafo censurato:</h2>";
